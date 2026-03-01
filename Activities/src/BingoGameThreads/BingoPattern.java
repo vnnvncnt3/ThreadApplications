@@ -2,7 +2,7 @@ package BingoGameThreads;
 
 import java.util.*;
 
-abstract class BingoPattern implements Runnable {
+public abstract class BingoPattern implements Runnable {
     protected final BingoCard card;
     protected final List<Thread> checkers = new ArrayList<>();
     protected final BingoGame game;

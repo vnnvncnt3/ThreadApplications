@@ -1,6 +1,6 @@
 package BingoGameThreads;
 
-abstract class BingoChecker implements Runnable {
+public abstract class BingoChecker implements Runnable {
     protected final BingoCard card;
     protected final BingoGame game;
 

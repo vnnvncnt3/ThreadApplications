@@ -1,6 +1,6 @@
 package BingoGameThreads;
 
-class BingoPatternHash extends BingoPattern {
+public class BingoPatternHash extends BingoPattern {
     public BingoPatternHash(BingoCard card, BingoGame game) {
         super(card, game);
         checkers.add(new Thread(new BingoRowChecker(card, 1, game)));

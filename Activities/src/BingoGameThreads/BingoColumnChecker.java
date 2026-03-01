@@ -1,6 +1,6 @@
 package BingoGameThreads;
 
-class BingoColumnChecker extends BingoChecker {
+public class BingoColumnChecker extends BingoChecker {
     private final int col;
 
     public BingoColumnChecker(BingoCard card, int col, BingoGame game) {
