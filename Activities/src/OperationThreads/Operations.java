@@ -18,26 +18,9 @@ public class Operations implements Runnable {
                 sum += list.get(i);
             }
             // Notify Analyze thread that it can proceed after the summation is complete
-            notify();
+            this.notify();
         }
     }
 }
 
-class Analyze implements Runnable {
-    Operations operations;
-    int ans;
 
-    public Analyze(Operations operations) {
-        this.operations = operations;
-        ans = 0;
-    }
-
-    @Override
-    public void run() {
-        ans = operations.sum / operations.list.size();
-    }
-
-    public int getAns() {
-        return ans;
-    }
-}

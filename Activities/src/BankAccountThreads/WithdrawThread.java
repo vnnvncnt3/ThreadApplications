@@ -9,11 +9,11 @@ public class WithdrawThread implements Runnable {
     @Override
     public void run(){
         for(int i = 100; i <= 500; i+= 100) {
-            account.withdraw(i);
             try {
+                account.withdraw(i);
                 Thread.sleep(500);
             } catch (InterruptedException e) {
-                throw new RuntimeException(e);
+                System.out.println("The withdrawal was interrupted!");
             }
         }
     }

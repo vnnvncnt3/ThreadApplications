@@ -1,9 +1,9 @@
 package SharedResourcesThreads;
 
-import java.util.Random;
+import java.util.*;
 
-public class SharedResources {
-    private int value;
+public class SharedResources{
+    public int value;
     boolean available;
 
     public SharedResources(int value){
@@ -11,7 +11,7 @@ public class SharedResources {
         this.value = value;
     }
 
-    synchronized public void produce() throws InterruptedException {
+    synchronized public void produce() throws InterruptedException{
         for(int i = 0; i < 5; i++){
             this.wait();
             Random random = new Random();
@@ -22,13 +22,13 @@ public class SharedResources {
         }
     }
 
-    synchronized public void consume() throws InterruptedException {
-        for(int i = 0; i < 5; i++) {
-            if (!available) {
+    synchronized public void consume() throws InterruptedException{
+        for(int i = 0; i < 5; i++){
+            if(!available){
                 this.wait();
             }
 
-            System.out.println("Consumes: " + value);
+            System.out.println("Consumers: " + value);
             available = false;
             this.notify();
         }

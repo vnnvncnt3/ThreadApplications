@@ -1,12 +1,13 @@
 package ArrayListThreads;
 
 import java.util.ArrayList;
-
-public class MyArrayList <E> implements Runnable {
+/*
+ <E extends Number> --> Utilizing intValue(), doubleValue(), and floatValue()
+ */
+public class MyArrayList <E extends Number>  implements Runnable {
     private ArrayList<E> array;
     private int size;
     private int start, end;
-
     private int sum;
 
     public MyArrayList(){
@@ -38,9 +39,7 @@ public class MyArrayList <E> implements Runnable {
     @Override
     public void run() {
         for(int i = start; i < end; i++){
-            if(array.get(i).equals(1) ){
-                sum++;
-            }
+            sum += array.get(i).intValue();
         }
     }
 }

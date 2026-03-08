@@ -12,7 +12,7 @@ public class Producer implements Runnable {
         try {
             shared.produce();
         } catch (InterruptedException e){
-            e.printStackTrace();
+
         }
     }
 }

@@ -12,7 +12,7 @@ public class Consumer implements Runnable {
         try {
             shared.consume();
         } catch (InterruptedException e){
-            e.printStackTrace();
+
         }
     }
 }
