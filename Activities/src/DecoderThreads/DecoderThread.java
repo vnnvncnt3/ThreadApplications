@@ -38,7 +38,7 @@ public class DecoderThread implements Runnable {
                 if (new String(str).equals(Main.password)) {
                     Main.found = true;
                     String res = new String(str);
-                    System.out.println("Thread " + Threadid + ": sucessfull" + " Result:" + res);
+                    System.out.println("Thread " + Threadid + ": successful" + " Result:" + res);
                     interruptThreads();
                     return;
                 }
